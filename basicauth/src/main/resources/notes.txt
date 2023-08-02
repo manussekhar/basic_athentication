@@ -1,0 +1,10 @@
+keytool -genkeypair -alias manuss -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore manuss.p12 -validity 3650
+
+PKCS12
+
+server.port=8084
+server.ssl.enabled=true
+server.ssl.key-store=classpath:manuss.p12
+server.ssl.key-store-password=123456
+server.ssl.key-store-type=PKCS12
+server.ssl.key-alias=manuss
